@@ -1,27 +1,31 @@
 <?php
-global $connect;
 
-if (isset($_POST['add'])) {
-    $task = $_POST['task'];
+function createTask()
+{
+    global $connect;
 
-    $data['taskMsg'] = '';
-    if (empty($task)) {
-        $data['taskMsg'] = 'Empty task field';
-    }
+    if (isset($_POST['add'])) {
+        $task = $_POST['task'];
 
-    $validation = false;
-    if (empty($data['taskMsg'])) {
-        $validation = true;
-    }
-
-    if ($validation) {
-        $query = "INSERT  INTO todo (task) VALUES ('$task')";
-
-        $result = $connect->query($query);
-
-        if ($result) {
-            $data['success'] = "Task is added successfully";
+        $data['taskMsg'] = '';
+        if (empty($task)) {
+            $data['taskMsg'] = "Empty task field !";
         }
+
+        $validation = false;
+        if (empty($data['taskMsg'])) {
+            $validation = true;
+        }
+
+        if ($validation) {
+            $query = "INSERT  INTO todo (task) VALUES ('$task')";
+
+            $result = $connect->query($query);
+
+            if ($result) {
+                $data['success'] = "Task is added successfully";
+            }
+        }
+        return $data;
     }
-    return $data;
 }
