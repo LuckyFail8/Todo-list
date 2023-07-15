@@ -34,7 +34,8 @@
                 include('database.php');
                 include('delete-to-do.php');
                 include('to-do-form.php');
-                include('to-do-list.php');                ?>
+                include('to-do-list.php');
+                ?>
             </div>
             <div class="sm:col-span-6"></div>
         </div>
