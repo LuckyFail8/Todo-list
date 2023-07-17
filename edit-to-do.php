@@ -16,6 +16,7 @@ function editTaskById()
         $result = $connect->query($query);
 
         $data = $result->fetch_assoc();
+        var_dump($data);
     }
     return $data;
 }

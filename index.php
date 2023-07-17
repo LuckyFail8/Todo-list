@@ -29,7 +29,7 @@ require __DIR__ . '/vendor/autoload.php';
 </head>
 
 <body>
-    <div class="container m-6">
+    <div class="container p-6">
         <h2 class="font-bold">PHP TO-DO list</h2>
         <div class="row-span-1">
             <div class="sm:col-span-6">
@@ -38,10 +38,15 @@ require __DIR__ . '/vendor/autoload.php';
                 include('delete-to-do.php');
                 include('to-do-form.php');
                 include('to-do-list.php');
-                var_dump($_POST['task']);
                 ?>
             </div>
-            <div class="sm:col-span-6"></div>
+            <div class="sm:col-span-6">
+                <h2>POST</h2>
+                <?php var_dump($_POST); ?>
+                <h2>GET</h2>
+                <?php var_dump($_GET); ?>
+
+            </div>
         </div>
     </div>
 </body>

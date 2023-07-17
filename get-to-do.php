@@ -12,6 +12,7 @@ function getTask(): array
     if ($result) {
         if ($result->num_rows > 0) {
             $data['data'] = $result->fetch_all(MYSQLI_ASSOC);
+            var_dump($data['data']);
         }
     }
 
