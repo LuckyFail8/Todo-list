@@ -1,3 +1,6 @@
+<?php
+require __DIR__ . '/vendor/autoload.php';
+?>
 <!doctype html>
 <html>
 
@@ -35,6 +38,7 @@
                 include('delete-to-do.php');
                 include('to-do-form.php');
                 include('to-do-list.php');
+                var_dump($_POST['task']);
                 ?>
             </div>
             <div class="sm:col-span-6"></div>
