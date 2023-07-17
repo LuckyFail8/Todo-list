@@ -6,8 +6,8 @@ function editTaskById()
 
     $data =  [];
 
-    if (isset($_GET['task']) && !empty($_GET['task'])) {
-        $id = $_GET['task'];
+    if (isset($_GET['edit-task']) && !empty($_GET['edit-task'])) {
+        $id = $_GET['edit-task'];
 
         $msg = [];
 
@@ -16,7 +16,7 @@ function editTaskById()
         $result = $connect->query($query);
 
         $data = $result->fetch_assoc();
-        var_dump($data);
+        var_dump($id);
     }
     return $data;
 }
